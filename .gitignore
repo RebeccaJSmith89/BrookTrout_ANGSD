@@ -1,0 +1,27 @@
+# Sequencing data
+*.bam
+*.bai
+*.cram
+*.fastq
+*.fastq.gz
+
+# Reference genomes
+*.fa
+*.fasta
+*.fai
+
+# ANGSD outputs
+*.saf.gz
+*.saf.idx
+*.saf.pos.gz
+*.sfs
+*.mafs.gz
+*.beagle.gz
+
+# HPC job outputs
+*.log
+slurm-*.out
+
+# Temporary files
+*.tmp
+*.temp
