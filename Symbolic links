@@ -1,0 +1,13 @@
+#I made a directory with symbolic links to the files I wanted to include in this anaylsis- symbolic links are basically short cuts- so I don't have to move files around
+
+mkdir -p bam_links #make the directory inside your working directory for the links
+
+for bam in ../WGS_bams/GS28_*.bam; do
+    filename=$(basename "$bam")
+
+    ln -s "$(readlink -f "$bam")" "bam_links/$filename" #ln -s creates symbolic link
+
+    ln -s "$(readlink -f "../bam_indexes/$filename.bai")" \
+          "bam_links/$filename.bai"
+done
+#this loop moves the .bam and .bai files into my new link directory within my working directory. So I'm not copying extra files, using up more storage, ect.. 
