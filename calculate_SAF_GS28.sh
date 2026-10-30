@@ -15,11 +15,13 @@ mkdir -p SAF_results
 # Calculate site allele frequency likelihoods
 angsd \
   -bam GS28.bamlist \
-  -GL 1 \
-  -doSaf 1 \
-  -anc ../WGS_reference/GCF_029448725.1_ASM2944872v1_genomic.fna \
-  -r NC_074665.1:1-1000000 \
-  -minMapQ 30 \
-  -minQ 20 \
-  -P 4 \
+  -GL 1 \ #SAMtools model
+  -doSaf 1 \ #SAF estimation method
+  -anc ../WGS_reference/GCF_029448725.1_ASM2944872v1_genomic.fna \ #ANCESTRAL REFERENCE FASTA
+  -r NC_074665.1:1-1000000 \ #restricting test region
+  #-baq 1: filtering base alignment quality
+  #-C 50: adjust mapping quality
+  -minMapQ 30 \ #mapping-quality threshold
+  -minQ 20 \ #base-quality threshold
+  -P 4 \ #4 threads
   -out SAF_results/GS28_test
