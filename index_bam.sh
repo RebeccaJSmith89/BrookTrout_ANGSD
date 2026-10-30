@@ -5,7 +5,8 @@
 #SBATCH --mem=8G
 #SBATCH --cpus-per-task=3
 
-set -euo pipefail
+#Optional Saftey feature; -e is exit on error; -u error on undefined variables; -o pipe fail
+set -euo pipefail 
 
 module load SAMtools
 
