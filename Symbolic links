@@ -11,3 +11,9 @@ for bam in ../WGS_bams/GS28_*.bam; do
           "bam_links/$filename.bai"
 done
 #this loop moves the .bam and .bai files into my new link directory within my working directory. So I'm not copying extra files, using up more storage, ect.. 
+
+#then you can make a file in your working directory that you will use for SAF and SFS.. or whatever downstream..
+
+nano GS28.bamlist #file nano opens a blank file and the name you give it
+bam_links/GS28_15_Fitzpatrick_250829_S1_merged.bam #pathway for the file 
+bam_links/GS28_20_Fitzpatrick_250829_S2_merged.bam
