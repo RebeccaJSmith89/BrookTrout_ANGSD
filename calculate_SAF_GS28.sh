@@ -17,7 +17,7 @@ angsd \
   -bam GS28.bamlist \
   -GL 1 \ #SAMtools model
   -doSaf 1 \
-  -anc ../WGS_reference/GCF_029448725.1_ASM2944872v1_genomic.fna \
+  -anc ../WGS_reference/GCF_029448725.1_ASM2944872v1_genomic.fna \ #ANCESTRAL REFERENCE GENOME
   -r NC_074665.1:1-1000000 \
   -minMapQ 30 \
   -minQ 20 \
