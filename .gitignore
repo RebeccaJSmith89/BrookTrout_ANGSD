@@ -25,3 +25,12 @@ slurm-*.out
 # Temporary files
 *.tmp
 *.temp
+# HPC directories excluded from GitHub
+bamlist/
+bam_links/
+SAF_results/
+SAF_array_results/
+logs/
+
+# ANGSD default output files
+angsdput.arg
