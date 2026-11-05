@@ -23,11 +23,6 @@ for bam in "$BAM_DIR"/*.bam; do
     # Define the index output path
     index="$INDEX_DIR/$filename.bai"
 
-    # Skip files that already have indexes
-    if [[ -s "$index" ]]; then
-        echo "Skipping $filename (index exists)"
-        continue
-    fi
 
     echo "Indexing $filename"
 
