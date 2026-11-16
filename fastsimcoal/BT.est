@@ -1,0 +1,31 @@
+// Priors and rules file
+// *********************
+
+[PARAMETERS]
+//#isInt? #name   #dist.#min  #max 
+//all Ns are in number of haploid individuals
+1	NER		unif	20	400	output	bounded
+1	NDC		unif	20	400	output	bounded
+1	NSA		unif	20	400	output	bounded
+1	NBU		unif	20	400	output	bounded
+1	NFC		unif	20	400	output	bounded
+1	NAB		unif	20	400	output	bounded
+1	NLCB	unif	20	400	output	bounded
+1	NBW		unif	20	400	output	bounded
+1	Ncor	unif	20	400	output	bounded
+1	NCat	unif	20	400	output	bounded
+1	NGC		unif	20	400	output	bounded
+1	NIC		unif	20	400	output	bounded
+1	NCC		unif	20	400	output	bounded
+1	NKF		unif	20	400	output	bounded
+1	NTH		unif	20	400	output	bounded
+0	m1		logunif	0.001	0.4	output
+0	m2		logunif	1e-5	0.2	output
+0	m3		logunif	1e-5	0.2	output
+1	Tnew	unif	10	100	output	
+1	Tgap	unif	2	100	hide
+
+
+[COMPLEX PARAMETERS]
+1	Told = Tnew+Tgap	output
+

@@ -34,3 +34,4 @@ logs/
 
 # ANGSD default output files
 angsdput.arg
+fastsimcoal/*.obs
